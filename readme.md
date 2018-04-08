@@ -25,7 +25,8 @@ springboot配置dubbo，参考[github地址](https://github.com/apache/incubator
         <version>0.1.0</version>
     </dependency>
 
-
+## 分布式锁
+基于Redis实现的分布式锁 - RedisDistributedLock.java
 
 ## 多环境配置文件切换
 [springboot使用maven的profiles实现多环境配置文件切换](https://my.oschina.net/scottCoder/blog/1541004)

@@ -28,7 +28,11 @@ class SeckillThread extends Thread {
 
     @Override
     public void run() {
-        service.seckill();
+        try {
+            service.seckill();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
 
@@ -48,11 +52,12 @@ class SKService {
         pool = new JedisPool(config, "127.0.0.1", 6379, 3000);
     }
 
-    public void seckill() {
+    public void seckill() throws InterruptedException {
         // 返回锁的value，供释放锁的时候进行判断
         String identifier = lock.lockWithTimeout("resource", 5000, 1000);
         System.out.println(Thread.currentThread().getName() + " get lock!");
-        System.out.println(--n);
+        System.out.println(--n);    // 获取分布式锁之后，进行业务操作
+        Thread.sleep(40);
         lock.releaseLock("resource", identifier);
         System.out.println(Thread.currentThread().getName() + " release lock!");
         System.out.println("-----");
