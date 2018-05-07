@@ -1,0 +1,2 @@
+cn.xiaoyu.spi.service.impl.DefaultHelloService
+cn.xiaoyu.spi.service.impl.CustomerHelloService

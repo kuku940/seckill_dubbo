@@ -26,6 +26,7 @@
         <module>seckill</module>
         <module>controller</module>
         <module>redis</module>
+        <module>spi</module>
     </modules>
 
     <properties>
