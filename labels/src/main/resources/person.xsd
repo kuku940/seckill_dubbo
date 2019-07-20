@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.xiaoyu.cn/schema/person"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.xiaoyu.cn/schema/person"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified">
+    <xsd:import namespace="http://www.springframework.org/schema/beans"/>
+    <!-- 定义element名,chewlType对应了bean的属性  -->
+    <xsd:element name="student" type="perType">
+        <xsd:annotation>
+            <xsd:documentation><![CDATA[ The chewl config ]]></xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+
+    <!--  配置各属性值，有点像Mybatis配置对应的model   -->
+    <xsd:complexType name="perType">
+        <xsd:attribute name="id" type="xsd:ID">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[ The unique identifier for a bean. ]]></xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="name" type="xsd:string" use="required">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[ The chewl name. ]]></xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="age" type="xsd:int">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[ The chewl age. ]]></xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="address" type="xsd:string">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[ The chewl address. ]]></xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="phone" type="xsd:string">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[ The chewl phone. ]]></xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+    </xsd:complexType>
+</xsd:schema>

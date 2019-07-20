@@ -27,6 +27,7 @@
         <module>controller</module>
         <module>redis</module>
         <module>spi</module>
+        <module>labels</module>
     </modules>
 
     <properties>
