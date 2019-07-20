@@ -22,4 +22,4 @@
 
 4. **启动服务，并访问接口**  
 [SwaggerUI地址](http://localhost:8080/swagger-ui.html#/)  
-![restful风格文档](./src/resources/image/Swagger-Restful风格文档.jpg)
+![restful风格文档](./src/main/resources/images/Swagger-Restful风格文档.jpg)
