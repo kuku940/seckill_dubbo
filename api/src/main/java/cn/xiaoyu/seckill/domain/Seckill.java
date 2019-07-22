@@ -1,5 +1,8 @@
 package cn.xiaoyu.seckill.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import io.swagger.annotations.ApiModelProperty;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -13,8 +16,17 @@ public class Seckill implements Serializable {
     private long seckillId;
     private String name;
     private int number;
+
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    @ApiModelProperty(required = true, example = "2018-01-01 00:00:00")
     private Date startTime;
+
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    @ApiModelProperty(required = true, example = "2018-01-01 00:00:00")
     private Date endTime;
+
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    @ApiModelProperty(required = true, example = "2018-01-01 00:00:00")
     private Date createTime;
 
     public long getSeckillId() {

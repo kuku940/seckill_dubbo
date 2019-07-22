@@ -40,7 +40,7 @@
             <!--<scope>provided</scope>-->
         </dependency>
 
-        <!-- swagger-ui 生成Restful API -->
+        <!-- swagger ui 生成帮助文档-->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
